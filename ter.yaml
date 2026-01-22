@@ -3,11 +3,11 @@ proxies:
     type: hysteria
     server: 107.173.237.95
     port: 28443
-    auth: jnntin888
+    password: "jnntin888"
+    protocol: quic
     tls: true
     sni: bing.com
     skip-cert-verify: true
-    quic: true
     udp: true
 
 proxy-groups:
