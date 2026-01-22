@@ -1,0 +1,31 @@
+proxies:
+  - name: "Hysteria2"
+    type: hysteria
+    server: 107.173.237.95
+    port: 28443
+    auth: jnntin888
+    alpn: ""
+    tls: true
+    sni: bing.com
+    skip-cert-verify: true
+    udp: true
+    quic: true
+    obfs: ""
+    obfs-host: ""
+    obfs-uri: ""
+    protocol: ""
+    connect-timeout: 5
+    udp-relay: true
+    fast-open: false
+    disable-udp: false
+    bind-address: ""
+    keepalive: 0
+
+proxy-groups:
+  - name: "Auto"
+    type: select
+    proxies:
+      - "Hysteria2"
+
+rules:
+  - MATCH,Auto
